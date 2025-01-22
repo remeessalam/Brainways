@@ -79,14 +79,14 @@ const OurValue = () => {
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between gap-4">
-              <p className="">AI Development</p>
+              <p className="">Chatbot Development</p>
               <p className="">92%</p>
             </div>
             <div className="w-full bg-white h-2 rounded-full overflow-hidden">
               <div className="bg-secondary h-full w-[92%]"></div>
             </div>
           </div>
-          <div className="flex flex-col gap-2">
+          {/* <div className="flex flex-col gap-2">
             <div className="flex justify-between gap-4">
               <p className="">IT Consulting</p>
               <p className="">90%</p>
@@ -94,7 +94,7 @@ const OurValue = () => {
             <div className="w-full bg-white h-2 rounded-full overflow-hidden">
               <div className="bg-secondary h-full w-[90%]"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
