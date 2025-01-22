@@ -130,7 +130,7 @@ const LandingHeader = () => {
           aria-label="toggle drawer"
         >
           <Hamburger
-            color="#011F3D"
+            color="#ffffff"
             size="23"
             toggled={isOpen}
             rounded

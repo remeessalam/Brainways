@@ -85,7 +85,7 @@ const WebsiteHeader = () => {
               <NavLink
                 onClick={() => setIsOpen(false)}
                 key={id}
-                className="text-3xl text-primary_text font-medium transition-colors duration-300 link"
+                className="text-3xl text-white font-medium transition-colors duration-300 link"
                 to={path}
               >
                 {name}
