@@ -85,7 +85,7 @@ const WebsiteHeader = () => {
               <NavLink
                 onClick={() => setIsOpen(false)}
                 key={id}
-                className="text-3xl text-white font-medium transition-colors duration-300 link"
+                className="text-3xl text-primary_text font-medium transition-colors duration-300 link"
                 to={path}
               >
                 {name}
@@ -94,11 +94,11 @@ const WebsiteHeader = () => {
           </div>
         </Drawer>
         <button
-          className="block lg:hidden justify-self-end"
+          className="block lg:hidden justify-self-end text-white"
           onClick={toggleDrawer}
         >
           <Hamburger
-            color="#011F3D"
+            color="#ffffff"
             size="23"
             toggled={isOpen}
             rounded
