@@ -1,4 +1,4 @@
-import logoImg from "./assets/logo/logo.webp";
+import logoImg from "./assets/logo/logo.png";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Home from "./pages/Home";
@@ -30,8 +30,9 @@ export { logoImg };
 
 export const companyDetails = {
   phone: "+91 9361061592",
-  address: "ABC Street, City, Country",
-  email: "vasanthsenthilkumar@brainwaystech.com",
+  phone2: "+91 7667924881",
+  address: "216b,Salem Main Road,Krishnagiri - 635001.",
+  email: "admin@brainwaystech.com",
   linkedin: "https://www.linkedin.com/in/vasanth-senthilkumar-9240632b5/",
   instagram: "https://www.instagram.com/brainwaystech_ai",
   twitter: "https://x.com/vasanthsoffici",

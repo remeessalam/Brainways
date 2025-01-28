@@ -28,7 +28,7 @@ const WebsiteFooter = () => {
             className="w-[12rem] object-contain"
             alt="logo"
           />
-          <p className="desc text-sm max-w-[22rem] mt-3">
+          <p className="desc text-sm max-w-[22rem] mt-3 !text-white">
             At Brainways Tech, we're dedicated to driving your business forward
             with innovative software solutions. With a passion for technology
             and a commitment to excellence, we specialize in delivering tailored
@@ -114,6 +114,20 @@ const WebsiteFooter = () => {
                     className="text-white inline"
                   />{" "}
                   <span className="text-sm">{companyDetails.phone}</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  aria-label="Contact us on Phone"
+                  to={`tel:${companyDetails.phone2}`}
+                  className="flex gap-3 text-white/70 hover:text-primary transition-colors duration-200"
+                >
+                  <Phone
+                    strokeWidth={1.5}
+                    size={20}
+                    className="text-white inline"
+                  />{" "}
+                  <span className="text-sm">{companyDetails.phone2}</span>
                 </Link>
               </li>
             </ul>

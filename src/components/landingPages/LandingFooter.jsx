@@ -85,6 +85,20 @@ const LandingFooter = () => {
                 <span className="text-sm ">{companyDetails.phone}</span>
               </Link>
             </li>
+            <li>
+              <Link
+                aria-label="Contact us on phone"
+                to={`tel:${companyDetails.phone2}`}
+                className="flex gap-3 text-white hover:text-secondary transition-colors duration-200"
+              >
+                <Phone
+                  strokeWidth={1.5}
+                  size={20}
+                  className="text-white inline"
+                />{" "}
+                <span className="text-sm ">{companyDetails.phone2}</span>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

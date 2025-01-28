@@ -16,7 +16,7 @@ const ThankYou = () => {
   return (
     <>
       <div className="h-[calc(100vh-10rem)] flex flex-col items-center justify-center bg-secondary/5">
-        <div className="py-4 sticky top-0 w-full bg-secondary/60 backdrop-blur-md z-50 text-primary_text">
+        <div className="py-4 sticky top-0 w-full bg-black/60 backdrop-blur-md z-50 text-primary_text">
           <div className="wrapper flex justify-between items-center gap-10">
             <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
               <Link smooth={true} to="/" className="cursor-pointer">
@@ -25,7 +25,7 @@ const ThankYou = () => {
                   src={logoImg}
                   width={150}
                   height={150}
-                  className="h-[3rem] md:h-[3.75rem] scale-125"
+                  className="h-[3rem] md:h-[3.75rem] scale-125 object-cover"
                   alt="logo"
                 />
               </Link>
@@ -46,7 +46,7 @@ const ThankYou = () => {
           </Link>
         </div>
       </div>
-      <div className="py-[3rem]">
+      <div className="py-[3rem] bg-primary text-white">
         <div className="wrapper flex lg:flex-row flex-col gap-7 sm:gap-14 justify-between">
           <div className="">
             <img
@@ -57,7 +57,7 @@ const ThankYou = () => {
               className="w-[10rem]"
               alt="logo"
             />
-            <p className="desc text-sm max-w-[22rem] mt-3">
+            <p className="desc text-sm max-w-[22rem] mt-3 !text-white">
               Our innovative solutions are designed not just to meet the demands
               of today but to anticipate the challenges of tomorrow, ensuring
               that your business stays ahead of the curve.
@@ -84,14 +84,14 @@ const ThankYou = () => {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row gap-7 sm:gap-14">
-            <div className="flex flex-col gap-2 text-primary_text">
+            <div className="flex flex-col gap-2 text-white">
               <h6 className="font-semibold">Company</h6>
               <ul className="flex flex-col gap-3 mt-1">
                 {links.map(({ path, name }) => (
                   <li key={path}>
                     <Link
                       to={path}
-                      className="max-w-[22rem] flex gap-2 items-center text-primary_text/70 hover:text-primary transition-colors duration-200"
+                      className="max-w-[22rem] flex gap-2 items-center text-white/70 hover:text-secondary transition-colors duration-200"
                     >
                       <ChevronRight size={17} strokeWidth={3} />
                       <span className="text-sm">{name}</span>
@@ -100,7 +100,7 @@ const ThankYou = () => {
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col gap-2 text-primary_text">
+            <div className="flex flex-col gap-2 text-white">
               <h6 className="font-semibold">Contact Us</h6>
               <ul className="flex flex-col gap-3 mt-1">
                 {/* <li className="max-w-[22rem] flex gap-3 text-primary_text/70">
@@ -111,15 +111,15 @@ const ThankYou = () => {
                   />{" "}
                   <span className="text-sm">{companyDetails.address}</span>
                 </li> */}
-                <li className="flex gap-3 text-primary_text/70">
+                <li className="flex gap-3 text-white/70">
                   <Link
                     to={`mailto:${companyDetails.email}`}
-                    className="flex gap-3 text-primary_text/70 hover:text-primary transition-colors duration-200"
+                    className="flex gap-3 text-white/70 hover:text-secondary transition-colors duration-200"
                   >
                     <Mail
                       strokeWidth={1.5}
                       size={20}
-                      className="text-primary inline"
+                      className="text-white inline"
                     />{" "}
                     <span className="text-sm">{companyDetails.email}</span>
                   </Link>
@@ -127,14 +127,27 @@ const ThankYou = () => {
                 <li>
                   <Link
                     to={`tel:${companyDetails.phone}`}
-                    className="flex gap-3 text-primary_text/70 hover:text-primary transition-colors duration-200"
+                    className="flex gap-3 text-white/70 hover:text-secondary transition-colors duration-200"
                   >
                     <Phone
                       strokeWidth={1.5}
                       size={20}
-                      className="text-primary inline"
+                      className="text-white inline"
                     />{" "}
                     <span className="text-sm">{companyDetails.phone}</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={`tel:${companyDetails.phone2}`}
+                    className="flex gap-3 text-white/70 hover:text-secondary transition-colors duration-200"
+                  >
+                    <Phone
+                      strokeWidth={1.5}
+                      size={20}
+                      className="text-white inline"
+                    />{" "}
+                    <span className="text-sm">{companyDetails.phone2}</span>
                   </Link>
                 </li>
               </ul>

@@ -21,7 +21,7 @@ const WebsiteHeader = () => {
   };
 
   return (
-    <div className="py-4 fixed top-0 w-full bg-[#1a1a1a] backdrop-blur-md z-50 text-white">
+    <div className="py-4 fixed top-0 w-full bg-black/60 backdrop-blur-md z-50 text-white">
       <div className="wrapper flex justify-between items-center gap-10">
         <div className="flex justify-between items-center gap-20 w-full">
           <Helmet>
@@ -38,7 +38,7 @@ const WebsiteHeader = () => {
               src={logoImg}
               width="75"
               height="75"
-              className="w-[6rem] md:w-[8rem] scale-150 object-contain"
+              className="w-[5rem] md:w-[6rem] scale-150 object-contain"
               alt="logo"
             />
           </NavLink>

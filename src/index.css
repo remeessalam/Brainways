@@ -12,7 +12,7 @@
 html {
   scroll-behavior: smooth;
   /* background-color: #FBF3F1; */
-  background-color: #000000;
+  background-color: #fbf7e8;
   /* color: #111111; */
   color: #111111;
   margin: 0;
@@ -60,7 +60,7 @@ html {
     @apply text-[1.15rem] sm:text-[1.25rem] font-light leading-tight text-white;
   }
   .desc {
-    @apply text-base font-light text-white;
+    @apply text-base font-light text-black;
   }
   .active-link {
     @apply text-secondary font-medium;

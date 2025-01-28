@@ -179,7 +179,7 @@ const Home = () => {
                 <h2 className="heading-2 max-w-[60rem]">
                   Transforming Visions into Reality
                 </h2>
-                <p className="desc text-white">
+                <p className="desc !text-black">
                   At{" "}
                   <span className="font-medium text-secondary">
                     Brainways Tech

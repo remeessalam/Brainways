@@ -35,6 +35,7 @@ const LeadForm = () => {
 
     // Construct the request payload
     var payload = {
+      // to: "remeesreme4u@gmail.com",
       to: companyDetails.email,
       subject: values.subject,
       body: emailBody,
@@ -80,7 +81,7 @@ const LeadForm = () => {
       <form
         onSubmit={handleSubmit(handleFormSubmit)}
         data-aos="fade-up"
-        className="flex flex-col gap-4 rounded-xl p-5 bg-background w-full max-w-4xl mx-auto mt-5"
+        className="flex flex-col gap-4 rounded-xl p-5 bg-white shadow-xl w-full max-w-4xl mx-auto mt-5"
       >
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="flex flex-col gap-1">
@@ -178,7 +179,7 @@ const LeadForm = () => {
         <button
           disabled={isSubmitting}
           type="submit"
-          className="secondary-btn mt-3 w-full"
+          className="primary-btn mt-3 w-full"
         >
           Submit
         </button>

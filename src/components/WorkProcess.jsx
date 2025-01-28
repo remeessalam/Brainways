@@ -57,10 +57,10 @@ const WorkProcess = () => {
               </div>
               <div className="hover:scale-[95%] transition-all duration-300 flex flex-col gap-2 items-center">
                 <item.icon className="z-10 w-[4rem] h-[4rem] fill-secondary" />
-                <h6 className="z-10 font-medium text-2xl text-center text-white">
+                <h6 className="z-10 font-medium text-2xl text-center text-black">
                   {item.title}
                 </h6>
-                <p className="z-10 text-white text-center">{item.desc}</p>
+                <p className="z-10 text-black text-center">{item.desc}</p>
               </div>
             </div>
           ))}

@@ -80,7 +80,7 @@ export const BlogItem = ({ blog }) => {
       <div className="flex flex-col gap-2 mt-[1rem]">
         <Link
           to={`/blogs/${blog.id}`}
-          className="text-xl hyphen-auto font-medium text-white leading-tight line-clamp-2 text-ellipsis group-hover:text-secondary transition-all duration-200"
+          className="text-xl hyphen-auto font-medium text-black leading-tight line-clamp-2 text-ellipsis group-hover:text-secondary transition-all duration-200"
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure
           neque nihil

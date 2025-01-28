@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
               data-aos="fade-up"
               className="heading-2 max-w-[60rem] mx-auto text-center"
             >
-              The fire that fuels our passion.
+              The fire that fuels our passion
             </h1>
             <h2 className="sub-heading text-center max-w-[60rem] mt-3 mx-auto">
               At Brainways Tech, we believe in the power of:
@@ -64,13 +64,13 @@ const WhyChooseUs = () => {
                   <div className="flex justify-between items-center w-full">
                     <p className="text-center text-2xl mt-2 font-semibold text-white">
                       {item.title}
-                      <span className="text-5xl text-secondary">.</span>
+                      {/* <span className="text-5xl text-secondary">.</span> */}
                     </p>
                     <div className="w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-full bg-secondary">
                       <item.icon className="w-[2rem] fill-white h-[2rem] transition-all duration-200" />
                     </div>
                   </div>
-                  <p className="text-start leading-tight mt-4 desc">
+                  <p className="text-start leading-tight mt-4 desc !text-white">
                     {item.desc}
                   </p>
                 </div>

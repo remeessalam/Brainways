@@ -5,7 +5,7 @@ const SubHeading = ({ heading, className }) => {
   return (
     <div
       data-aos="fade-up"
-      className={`${className} section-heading flex items-center gap-1 text-white`}
+      className={`${className} section-heading flex items-center gap-1 text-black`}
     >
       <Minus size={30} /> {heading}
     </div>
