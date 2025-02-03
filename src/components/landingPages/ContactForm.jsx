@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import SubHeading from "../SubHeading";
-// import bgImg from "../../assets/images/landingpage/landing-contactus.webp";
 import { SpinnerContext } from "../SpinnerContext";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -18,11 +17,14 @@ const ContactForm = () => {
   } = useForm({
     mode: "all",
     defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
+      fullName: "",
+      businessEmail: "",
+      companyName: "",
+      websiteUrl: "",
+      industry: "",
+      itServiceNeeded: "",
+      projectNeeds: "",
+      preferredContactMethod: "",
     },
   });
 
@@ -30,15 +32,19 @@ const ContactForm = () => {
   const handleFormSubmit = async (values) => {
     setSpinner(true);
 
-    var emailBody = "Name: " + values.name + "\n\n";
-    emailBody += "Email: " + values.email + "\n\n";
-    emailBody += "Phone: " + values.phone + "\n\n";
-    emailBody += "Message:\n" + values.message;
+    var emailBody = "Full Name: " + values.fullName + "\n\n";
+    emailBody += "Business Email: " + values.businessEmail + "\n\n";
+    emailBody += "Company Name: " + values.companyName + "\n\n";
+    emailBody += "Website URL: " + values.websiteUrl + "\n\n";
+    emailBody += "Industry: " + values.industry + "\n\n";
+    emailBody += "IT Service Needed: " + values.itServiceNeeded + "\n\n";
+    emailBody += "Project Needs: " + values.projectNeeds + "\n\n";
+    emailBody += "Preferred Contact Method: " + values.preferredContactMethod;
 
     // Construct the request payload
     var payload = {
       to: companyDetails.email,
-      subject: values.subject,
+      subject: "New Contact Form Submission",
       body: emailBody,
     };
 
@@ -64,11 +70,11 @@ const ContactForm = () => {
       })
       .finally(() => setSpinner(false));
   };
+
   return (
     <div
       id="contact"
       className="py-[5rem] bg-secondary/5 bg-[100%_40%] relative min-h-[40rem] flex items-center"
-      // style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="absolute top-0 w-full h-full bg-white/70"></div>
       <div className="wrapper relative z-10 w-full">
@@ -94,9 +100,9 @@ const ContactForm = () => {
           <div className="flex flex-col gap-1">
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Full Name"
               className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("name", {
+              {...register("fullName", {
                 required: "Full name is required",
                 validate: (val) => {
                   if (val.trim() !== "") {
@@ -107,77 +113,142 @@ const ContactForm = () => {
                 },
               })}
             />
-            <small className="error-message">{errors.name?.message}</small>
+            <small className="error-message">{errors.fullName?.message}</small>
           </div>
           <div className="flex flex-col gap-1">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Business Email/Gmail"
               className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("email", {
-                required: "Email is required",
+              {...register("businessEmail", {
+                required: "Business email is required",
                 pattern: {
                   value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                   message: "Entered email is invalid",
                 },
               })}
             />
-            <small className="error-message">{errors.email?.message}</small>
-          </div>
-          <div className="flex flex-col gap-1">
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("phone", {
-                required: "Phone number is required",
-                pattern: {
-                  value: /^\+?[0-9]{10,15}$/,
-                  message: "Entered phone number is invalid",
-                },
-              })}
-            />
-            <small className="error-message">{errors.phone?.message}</small>
+            <small className="error-message">
+              {errors.businessEmail?.message}
+            </small>
           </div>
           <div className="flex flex-col gap-1">
             <input
               type="text"
-              placeholder="Subject"
+              placeholder="Company Name"
               className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("subject", {
-                required: "Subject is required",
+              {...register("companyName", {
+                required: "Company name is required",
                 validate: (val) => {
                   if (val.trim() !== "") {
                     return true;
                   } else {
-                    return "Subject is required";
+                    return "Company name is required";
                   }
                 },
               })}
             />
-            <small className="error-message">{errors.subject?.message}</small>
+            <small className="error-message">
+              {errors.companyName?.message}
+            </small>
+          </div>
+          <div className="flex flex-col gap-1">
+            <input
+              type="url"
+              placeholder="Website URL"
+              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
+              {...register("websiteUrl", {
+                required: "Website URL is required",
+                pattern: {
+                  value:
+                    /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
+                  message: "Entered URL is invalid",
+                },
+              })}
+            />
+            <small className="error-message">
+              {errors.websiteUrl?.message}
+            </small>
+          </div>
+          <div className="flex flex-col gap-1">
+            <input
+              type="text"
+              placeholder="Industry"
+              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
+              {...register("industry", {
+                required: "Industry is required",
+                validate: (val) => {
+                  if (val.trim() !== "") {
+                    return true;
+                  } else {
+                    return "Industry is required";
+                  }
+                },
+              })}
+            />
+            <small className="error-message">{errors.industry?.message}</small>
+          </div>
+          <div className="flex flex-col gap-1">
+            <input
+              type="text"
+              placeholder="What IT service do you need?"
+              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
+              {...register("itServiceNeeded", {
+                required: "IT service needed is required",
+                validate: (val) => {
+                  if (val.trim() !== "") {
+                    return true;
+                  } else {
+                    return "IT service needed is required";
+                  }
+                },
+              })}
+            />
+            <small className="error-message">
+              {errors.itServiceNeeded?.message}
+            </small>
           </div>
           <div className="flex flex-col gap-1">
             <textarea
               rows="3"
-              placeholder="Message"
+              placeholder="Describe your project needs"
               className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("message", {
-                required: "Message is required",
+              {...register("projectNeeds", {
+                required: "Project needs description is required",
                 validate: (val) => {
                   if (val.trim() !== "") {
                     return true;
                   } else {
-                    return "Message is required";
+                    return "Project needs description is required";
                   }
                 },
               })}
             />
-            <small className="error-message">{errors.message?.message}</small>
+            <small className="error-message">
+              {errors.projectNeeds?.message}
+            </small>
+          </div>
+          <div className="flex flex-col gap-1">
+            <select
+              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
+              {...register("preferredContactMethod", {
+                required: "Preferred contact method is required",
+              })}
+            >
+              <option value="">
+                Preferred Contact Method (Call/Email/WhatsApp Chat)
+              </option>
+              <option value="Call">Call</option>
+              <option value="Email">Email</option>
+              <option value="WhatsApp Chat">WhatsApp Chat</option>
+            </select>
+            <small className="error-message">
+              {errors.preferredContactMethod?.message}
+            </small>
           </div>
           <button
             disabled={isSubmitting}
-            type="button"
+            type="submit"
             className="secondary-btn mt-2"
           >
             Send Message
