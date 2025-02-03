@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
+import { FaRobot, FaComments, FaHeadset, FaPlug } from "react-icons/fa";
 
 // all services
 import { ReactComponent as allServiceIcon1 } from "./assets/svgs/services/Web Development.svg";
@@ -25,6 +26,16 @@ import { ReactComponent as webServiceIcon1 } from "./assets/svgs/services/E-Comm
 import { ReactComponent as webServiceIcon2 } from "./assets/svgs/services/Social Media Websites.svg";
 import { ReactComponent as webServiceIcon3 } from "./assets/svgs/services/Web Development.svg";
 import { ReactComponent as webServiceIcon4 } from "./assets/svgs/services/UIUX Design.svg";
+// Custom Software Development  services
+import { ReactComponent as customsoftwareicon1 } from "./assets/svgs/services/Custom Software Development.svg";
+import { ReactComponent as customsoftwareicon2 } from "./assets/svgs/services/Software Application Development.svg";
+import { ReactComponent as customsoftwareicon3 } from "./assets/svgs/services/Legacy System Modernization.svg";
+import { ReactComponent as customsoftwareicon4 } from "./assets/svgs/services/Software Integration Services.svg";
+// chatbot development services
+import { ReactComponent as chatboticon1 } from "./assets/svgs/services/AIPoweredChatbots.svg";
+import { ReactComponent as chatboticon2 } from "./assets/svgs/services/Custom-Chatbot Development.svg";
+import { ReactComponent as chatboticon3 } from "./assets/svgs/services/Conversational AI Solutions.svg";
+import { ReactComponent as chatboticon4 } from "./assets/svgs/services/Chatbot Integration Services.svg";
 
 export { logoImg };
 
@@ -132,6 +143,62 @@ export const appDevelopmentServices = [
     icon: appServiceIcon4,
     description:
       "We build feature-rich hybrid apps tailored to your business needs. We create mobile-friendly apps that work seamlessly across iOS and Android devices.",
+  },
+];
+export const customSoftwareServices = [
+  {
+    id: 1,
+    icon: customsoftwareicon1,
+    title: "Custom Software Development",
+    description: "Bespoke solutions for complex business challenges",
+  },
+  {
+    id: 2,
+    icon: customsoftwareicon2,
+    title: "Software Application Development",
+    description: "Scalable, secure, and high-performance applications",
+  },
+  {
+    id: 3,
+    icon: customsoftwareicon3,
+    title: "Legacy System Modernization",
+    description: "Upgrading outdated systems for enhanced efficiency",
+  },
+  {
+    id: 4,
+    icon: customsoftwareicon4,
+    title: "Software Integration Services",
+    description: "Seamless integration with existing systems and platforms",
+  },
+];
+
+export const chatbotServices = [
+  {
+    id: 1,
+    title: "AI-Powered Chatbots",
+    icon: chatboticon1,
+    description:
+      "Intelligent, data-driven solutions for complex customer interactions.",
+  },
+  {
+    id: 2,
+    title: "Custom Chatbot Development",
+    icon: chatboticon2,
+    description:
+      "Tailored chatbots for websites, messaging platforms, and voice assistants.",
+  },
+  {
+    id: 3,
+    title: "Conversational AI Solutions",
+    icon: chatboticon3,
+    description:
+      "Innovative solutions for customer support, sales, and marketing.",
+  },
+  {
+    id: 4,
+    title: "Chatbot Integration Services",
+    icon: chatboticon4,
+    description: "Seamless integration with existing systems and platforms.",
   },
 ];
 

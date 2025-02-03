@@ -16,6 +16,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppIcon from "./components/WhatsAppIcon";
 import { Toaster } from "react-hot-toast";
 const LandingPage = lazy(() => import("./pages/LandingPage"));
+const LandingPage2 = lazy(() => import("./pages/LandingPage2"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 AOS.init({
@@ -60,6 +61,14 @@ function App() {
             <Route
               path="/app-development"
               element={<LandingPage page={"app-development"} />}
+            />
+            <Route
+              path="/custom-software-development"
+              element={<LandingPage2 page={"custom-software-development"} />}
+            />
+            <Route
+              path="/chatbot-development"
+              element={<LandingPage2 page={"chatbot-development"} />}
             />
           </Routes>
         </Router>
