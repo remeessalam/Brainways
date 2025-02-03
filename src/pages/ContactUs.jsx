@@ -16,7 +16,7 @@ const ContactUs = () => {
       <PageBanner title="Contact Us" />
       <div className="pt-[3rem]">
         <div className="wrapper">
-          <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-3xl mx-auto mb-[3rem]">
+          <div className="grid sm:grid-cols-3 lg:grid-cols-3 gap-5 max-w-3xl mx-auto mb-[3rem]">
             <div
               data-aos="fade-up"
               className="bg-secondary/30 flex flex-col gap-3 text-black items-center justify-center rounded-xl p-5"
@@ -46,18 +46,18 @@ const ContactUs = () => {
               <Phone strokeWidth={2} size={40} className="inline" />
               <span className="text-center font-medium">
                 {companyDetails.phone}
+                <br />
+                {companyDetails.phone2}
               </span>
             </Link>
-            <Link
+            {/* <Link
               to={`tel:${companyDetails.phone2}`}
               data-aos="fade-up"
               className="bg-secondary/30 flex flex-col gap-3 text-black items-center justify-center rounded-xl p-5"
             >
               <Phone strokeWidth={2} size={40} className="inline" />
-              <span className="text-center font-medium">
-                {companyDetails.phone2}
-              </span>
-            </Link>
+              <span className="text-center font-medium"></span>
+            </Link> */}
           </div>
         </div>
         <LeadForm />

@@ -166,8 +166,8 @@ const LandingPage = ({ page }) => {
               data-aos="fade-up"
               className="bg-primary/5  shadow-inner group shadow-primary/40 hover:bg-primary/10 items-center rounded-lg p-5 flex text-center flex-col"
             >
-              <service.icon className="w-[5rem] h-[5rem] fill-white group-hover:fill-secondary transition-all duration-300" />
-              <h6 className="text-xl font-medium mt-4 text-white group-hover:text-secondary transition-all duration-300">
+              <service.icon className="w-[5rem] h-[5rem] fill-primary group-hover:fill-secondary transition-all duration-300" />
+              <h6 className="text-xl font-medium mt-4 text-primary group-hover:text-secondary transition-all duration-300">
                 {service.title}
               </h6>
               <p className="desc mt-2 text-white">{service.description}</p>

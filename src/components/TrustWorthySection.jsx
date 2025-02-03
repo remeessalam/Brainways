@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const TrustWorthySection = React.memo(() => {
   const totalYrs = 4;
-  const projectsDone = 300;
+  const projectsDone = 320;
   const totalExperts = 200;
   const happlyClients = 250;
 

@@ -16,11 +16,14 @@ const LeadForm = () => {
   } = useForm({
     mode: "all",
     defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
+      fullName: "",
+      businessEmail: "",
+      companyName: "",
+      websiteUrl: "",
+      industry: "",
+      itServiceNeeded: "",
+      projectNeeds: "",
+      preferredContactMethod: "",
     },
   });
 
@@ -28,16 +31,20 @@ const LeadForm = () => {
   const handleFormSubmit = async (values) => {
     setSpinner(true);
 
-    var emailBody = "Name: " + values.name + "\n\n";
-    emailBody += "Email: " + values.email + "\n\n";
-    emailBody += "Phone: " + values.phone + "\n\n";
-    emailBody += "Message:\n" + values.message;
+    var emailBody = "Full Name: " + values.fullName + "\n\n";
+    emailBody += "Business Email: " + values.businessEmail + "\n\n";
+    emailBody += "Company Name: " + values.companyName + "\n\n";
+    emailBody += "Website URL: " + values.websiteUrl + "\n\n";
+    emailBody += "Industry: " + values.industry + "\n\n";
+    emailBody += "IT Service Needed: " + values.itServiceNeeded + "\n\n";
+    emailBody += "Project Needs: " + values.projectNeeds + "\n\n";
+    emailBody += "Preferred Contact Method: " + values.preferredContactMethod;
 
     // Construct the request payload
     var payload = {
-      // to: "remeesreme4u@gmail.com",
-      to: companyDetails.email,
-      subject: values.subject,
+      to: "remeesreme4u@gmail.com",
+      // to: companyDetails.email,
+      subject: "New Lead Form Submission",
       body: emailBody,
     };
 
@@ -63,6 +70,7 @@ const LeadForm = () => {
       })
       .finally(() => setSpinner(false));
   };
+
   return (
     <div className="flex flex-col gap-4 py-[5rem] px-5 bg-primary/5">
       <h2
@@ -85,12 +93,12 @@ const LeadForm = () => {
       >
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="flex flex-col gap-1">
-            <label className="text-sm ml-2">Name</label>
+            <label className="text-sm ml-2">Full Name</label>
             <input
               type="text"
               className="outline-none p-2 rounded-full bg-white/60 text-black border"
-              placeholder="Name"
-              {...register("name", {
+              placeholder="Full Name"
+              {...register("fullName", {
                 required: "Full name is required",
                 validate: (val) => {
                   if (val.trim() !== "") {
@@ -101,80 +109,148 @@ const LeadForm = () => {
                 },
               })}
             />
-            <small className="error-message">{errors.name?.message}</small>
+            <small className="error-message">{errors.fullName?.message}</small>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-sm ml-2">Email</label>
+            <label className="text-sm ml-2">Business Email/Gmail</label>
             <input
               type="email"
               className="outline-none p-2 rounded-full bg-white/60 text-black border"
-              placeholder="Email"
-              {...register("email", {
-                required: "Email is required",
+              placeholder="Business Email/Gmail"
+              {...register("businessEmail", {
+                required: "Business email is required",
                 pattern: {
                   value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                   message: "Entered email is invalid",
                 },
               })}
             />
-            <small className="error-message">{errors.email?.message}</small>
+            <small className="error-message">
+              {errors.businessEmail?.message}
+            </small>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="flex flex-col gap-1">
-            <label className="text-sm ml-2">Phone</label>
-            <input
-              type="tel"
-              className="outline-none p-2 rounded-full bg-white/60 text-black border"
-              placeholder="Phone Number"
-              {...register("phone", {
-                required: "Phone number is required",
-                pattern: {
-                  value: /^\+?[0-9]{10,15}$/,
-                  message: "Entered phone number is invalid",
-                },
-              })}
-            />
-            <small className="error-message">{errors.phone?.message}</small>
-          </div>
-          <div className="flex flex-col gap-1">
-            <label className="text-sm ml-2">Subject</label>
+            <label className="text-sm ml-2">Company Name</label>
             <input
               type="text"
               className="outline-none p-2 rounded-full bg-white/60 text-black border"
-              placeholder="Subject"
-              {...register("subject", {
-                required: "Subject is required",
+              placeholder="Company Name"
+              {...register("companyName", {
+                required: "Company name is required",
                 validate: (val) => {
                   if (val.trim() !== "") {
                     return true;
                   } else {
-                    return "Subject is required";
+                    return "Company name is required";
                   }
                 },
               })}
             />
-            <small className="error-message">{errors.subject?.message}</small>
+            <small className="error-message">
+              {errors.companyName?.message}
+            </small>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-sm ml-2">Website URL</label>
+            <input
+              type="text"
+              className="outline-none p-2 rounded-full bg-white/60 text-black border"
+              placeholder="Website URL"
+              {...register("websiteUrl", {
+                required: "Website URL is required",
+                pattern: {
+                  value:
+                    /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
+                  message: "Entered URL is invalid",
+                },
+              })}
+            />
+            <small className="error-message">
+              {errors.websiteUrl?.message}
+            </small>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-5">
+          <div className="flex flex-col gap-1">
+            <label className="text-sm ml-2">Industry</label>
+            <input
+              type="text"
+              className="outline-none p-2 rounded-full bg-white/60 text-black border"
+              placeholder="Industry"
+              {...register("industry", {
+                required: "Industry is required",
+                validate: (val) => {
+                  if (val.trim() !== "") {
+                    return true;
+                  } else {
+                    return "Industry is required";
+                  }
+                },
+              })}
+            />
+            <small className="error-message">{errors.industry?.message}</small>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-sm ml-2">What IT service do you need?</label>
+            <input
+              type="text"
+              className="outline-none p-2 rounded-full bg-white/60 text-black border"
+              placeholder="IT Service Needed"
+              {...register("itServiceNeeded", {
+                required: "IT service needed is required",
+                validate: (val) => {
+                  if (val.trim() !== "") {
+                    return true;
+                  } else {
+                    return "IT service needed is required";
+                  }
+                },
+              })}
+            />
+            <small className="error-message">
+              {errors.itServiceNeeded?.message}
+            </small>
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-sm ml-2">Message</label>
+          <label className="text-sm ml-2">Describe your project needs</label>
           <textarea
             rows="4"
             className="outline-none p-2 rounded-2xl bg-white/60 text-black border"
-            placeholder="Message"
-            {...register("message", {
-              required: "Message is required",
+            placeholder="Describe your project needs"
+            {...register("projectNeeds", {
+              required: "Project needs description is required",
               validate: (val) => {
                 if (val.trim() !== "") {
                   return true;
                 } else {
-                  return "Message is required";
+                  return "Project needs description is required";
                 }
               },
             })}
           />
-          <small className="error-message">{errors.message?.message}</small>
+          <small className="error-message">
+            {errors.projectNeeds?.message}
+          </small>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="text-sm ml-2">Preferred Contact Method</label>
+          <select
+            className="outline-none p-2 rounded-full bg-white/60 text-black border"
+            {...register("preferredContactMethod", {
+              required: "Preferred contact method is required",
+            })}
+          >
+            <option value="">Select Contact Method</option>
+            <option value="Call">Call</option>
+            <option value="Email">Email</option>
+            <option value="WhatsApp Chat">WhatsApp Chat</option>
+          </select>
+          <small className="error-message">
+            {errors.preferredContactMethod?.message}
+          </small>
         </div>
         <button
           disabled={isSubmitting}
