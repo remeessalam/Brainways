@@ -44,8 +44,9 @@ export const companyDetails = {
   phone2: "+91 7667924881",
   address: "216b,Salem Main Road,Krishnagiri - 635001.",
   email: "admin@brainwaystech.com",
-  linkedin: "https://www.linkedin.com/in/vasanth-senthilkumar-9240632b5/",
-  instagram: "https://www.instagram.com/brainwaystech_ai",
+  linkedin: "https://www.linkedin.com/company/brainwaystech-llp/",
+  instagram:
+    "https://www.instagram.com/brainwaystech_ai?igsh=MTk5Y25wMDA0NHM2ag==",
   twitter: "https://x.com/vasanthsoffici",
 };
 

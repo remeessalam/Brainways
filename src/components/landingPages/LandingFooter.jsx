@@ -3,8 +3,27 @@ import { companyDetails, logoImg } from "../../constant";
 import { Instagram, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { Link as Scroll } from "react-scroll";
 
 const LandingFooter = () => {
+  const options = [
+    // {
+    //   name: "Home",
+    //   path: "banner",
+    // },
+    {
+      name: "About Us",
+      path: "about",
+    },
+    {
+      name: "Services",
+      path: "services",
+    },
+    {
+      name: "Contact Us",
+      path: "contact",
+    },
+  ];
   return (
     <div className="py-[3rem] bg-primary">
       <div className="wrapper flex lg:flex-row flex-col gap-7 justify-between">
@@ -20,6 +39,12 @@ const LandingFooter = () => {
             className="w-[12rem] object-contain"
             alt="logo"
           />
+          <p className="desc text-sm max-w-[22rem] mt-3 !text-white">
+            At Brainways Tech, we're dedicated to driving your business forward
+            with innovative software solutions. With a passion for technology
+            and a commitment to excellence, we specialize in delivering tailored
+            software products and services to meet your unique needs.
+          </p>
           <div className="flex items-center gap-3 mt-5">
             <Link
               aria-label="Contact us on Instagram"
@@ -44,9 +69,42 @@ const LandingFooter = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-2 text-primary_text">
-          <h6 className="font-semibold">Contact Us</h6>
-          <ul className="flex flex-col gap-3 mt-1">
+        <div className="flex flex-row gap-2 text-primary_text">
+          <div className="flex flex-col gap-2 text-primary_text">
+            <h6 className="font-semibold text-white">Company</h6>
+
+            <Link to="/" className="link text-white">
+              Home
+            </Link>
+            {options
+              // .filter((option) => option.path !== "contact")
+              .map((option) => (
+                <Scroll
+                  to={`${option.path}`}
+                  className="link text-white"
+                  key={option.path}
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={1000}
+                  activeClass="active-link"
+                >
+                  {option.name}
+                </Scroll>
+              ))}
+            {/* <Scroll
+              to="contact"
+              className="primary-btn"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={1000}
+            >
+              Contact Us
+            </Scroll> */}
+          </div>
+          <ul className="flex flex-col gap-3 ">
+            <h6 className="font-semibold text-white">Contact Us</h6>
             {/* <li className="max-w-[22rem] flex gap-3 text-primary_text/70">
               <MapPin
                 strokeWidth={1.5}
