@@ -40,8 +40,8 @@ import { ReactComponent as chatboticon4 } from "./assets/svgs/services/Chatbot I
 export { logoImg };
 
 export const companyDetails = {
-  phone: "+91 9361061592",
-  phone2: "+91 7667924881",
+  phone: "+91-9361061592",
+  phone2: "+91-7667924881",
   address: "216b,Salem Main Road,Krishnagiri - 635001.",
   email: "admin@brainwaystech.com",
   linkedin: "https://www.linkedin.com/company/brainwaystech-llp/",
