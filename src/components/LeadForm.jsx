@@ -42,8 +42,8 @@ const LeadForm = () => {
 
     // Construct the request payload
     var payload = {
-      to: "remeesreme4u@gmail.com",
-      // to: companyDetails.email,
+      // to: "remeesreme4u@gmail.com",
+      to: companyDetails.email,
       subject: "New Lead Form Submission",
       body: emailBody,
     };
@@ -158,14 +158,14 @@ const LeadForm = () => {
               type="text"
               className="outline-none p-2 rounded-full bg-white/60 text-black border"
               placeholder="Website URL"
-              {...register("websiteUrl", {
-                required: "Website URL is required",
-                pattern: {
-                  value:
-                    /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
-                  message: "Entered URL is invalid",
-                },
-              })}
+              // {...register("websiteUrl", {
+              //   required: "Website URL is required",
+              //   pattern: {
+              //     value:
+              //       /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
+              //     message: "Entered URL is invalid",
+              //   },
+              // })}
             />
             <small className="error-message">
               {errors.websiteUrl?.message}

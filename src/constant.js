@@ -12,7 +12,7 @@ import { ReactComponent as allServiceIcon1 } from "./assets/svgs/services/Web De
 import { ReactComponent as allServiceIcon2 } from "./assets/svgs/services/App Development.svg";
 import { ReactComponent as allServiceIcon3 } from "./assets/svgs/services/UIUX Design.svg";
 import { ReactComponent as allServiceIcon4 } from "./assets/svgs/services/Chatbots.svg";
-import { ReactComponent as allServiceIcon5 } from "./assets/svgs/services/Machine Learning Solutions.svg";
+import { ReactComponent as allServiceIcon5 } from "./assets/svgs/services/Custom Software Development.svg";
 import { ReactComponent as allServiceIcon6 } from "./assets/svgs/services/Game Development.svg";
 
 // app development services
@@ -287,32 +287,13 @@ export const allServices = [
       <br/>
       <p>We’re not just about writing code—we're about building apps that solve real business problems and provide exceptional user experiences.</p>`,
   },
-  // {
-  //   id: 3,
-  //   title: "UX/UI Design",
-  //   description:
-  //     "Create intuitive and visually appealing user interfaces and experiences that enhance usability and customer satisfaction.",
-  //   icon: allServiceIcon3,
-  //   detailHeading: "UX/UI Design: Crafting Seamless and Engaging User Journeys",
-  //   detailContent: `<p>A great digital product is nothing without an exceptional user experience. Our UX/UI design services focus on creating intuitive, user-centered designs that make it easy for your customers to engage with your business. Here's how we bring your vision to life:</p>
-  //     <br/>
-  //     <ol>
-  //       <li><b>User-Centered Design:</b><br/>We take the time to understand your users—their needs, behaviors, and goals—so we can design interfaces that feel natural and engaging.</li>
-  //       <br/>
-  //       <li><b>Prototyping and Testing:</b> <br/> Before anything goes live, we create interactive prototypes to test and gather feedback. This ensures that the final design is both functional and delightful to use.</li>
-  //       <br/>
-  //       <li><b>Beautiful and Functional Interfaces:</b><br/>  Our UI designers craft stunning visuals that not only look great but also provide a smooth, seamless experience for your users.</li>
-  //     </ol>
-  //     <br/>
-  //     <br/>
-  //     <p>From websites to mobile apps, we design user experiences that lead to higher engagement, satisfaction, and loyalty.</p>`,
-  // },
   {
     id: 4,
     title: "Chatbot Development",
     description:
       "Transform your customer interactions with our advanced chatbot solutions. Our expert team specializes in developing intelligent chatbots that streamline communication, automate tasks, and enhance user experiences. From customer support to lead generation, we’ll help you harness the power of conversational AI to drive efficiency and engagement.",
     icon: allServiceIcon4,
+    link: "/chatbot-development",
     detailHeading: "Chatbots: Automate and Enhance Customer Interaction",
     detailContent: `<p>Transform your customer interactions with our advanced chatbot solutions. Our expert team specializes in developing intelligent chatbots that streamline communication, automate tasks, and enhance user experiences. From customer support to lead generation, we’ll help you harness the power of conversational AI to drive efficiency and engagement. Our chatbot services include:</p>
       <br/>
@@ -327,48 +308,29 @@ export const allServices = [
       <br/>
       <p>We focus on delivering solutions that enhance customer satisfaction and drive results, while giving you more time to focus on growing your business.</p>`,
   },
-  // {
-  //   id: 5,
-  //   title: "AI Development Solutions",
-  //   description:
-  //     "Harness the power of AI to innovate and automate processes, driving efficiency and intelligent decision-making.",
-  //   icon: allServiceIcon5,
-  //   detailHeading:
-  //     "AI Development Solutions: Empowering Innovation with Artificial Intelligence",
-  //   detailContent: `<p>In the age of artificial intelligence (AI), leveraging AI technologies can revolutionize your business operations. At Brainways Tech, we specialize in developing AI solutions that help businesses innovate, automate, and make intelligent decisions. Our AI services include:</p>
-  //     <br/>
-  //     <ol>
-  //       <li><b>Intelligent Automation:</b><br/> Harness the power of AI to streamline workflows, reduce manual effort, and improve operational efficiency through intelligent process automation.</li>
-  //       <br/>
-  //       <li><b>Predictive Insights:</b> <br/> Use advanced AI models to uncover patterns, predict outcomes, and drive data-informed decisions with greater accuracy.</li>
-  //       <br/>
-  //       <li><b>Personalized Experiences:</b><br/> Enhance user engagement and satisfaction by delivering AI-driven personalized experiences tailored to individual needs and preferences.</li>
-  //     </ol>
-  //     <br/>
-  //     <br/>
-  //     <p>Our AI development solutions are designed to transform data into actionable insights, foster innovation, and enable sustainable business growth.</p>`,
-  // },
-  // {
-  //   id: 6,
-  //   title: "Game Development",
-  //   description:
-  //     "Creating immersive and engaging gaming experiences through advanced design, development, and technology for various platforms and audiences.",
-  //   icon: allServiceIcon6,
-  //   detailHeading:
-  //     "Game Development: Bringing Your Ideas to Life with Interactive Experiences",
-  //   detailContent: `<p>Whether you're an indie developer with a fresh idea or a large studio looking to expand your portfolio, we offer comprehensive game development services to bring your vision to life. At Brainways Tech, we specialize in creating immersive, engaging games for mobile, console, and PC platforms. Our game development services include:</p>
-  //     <br/>
-  //     <ol>
-  //       <li><b>Concept and Story Development:</b><br/>We work with you to develop compelling narratives, unique characters, and engaging gameplay mechanics that keep players coming back.</li>
-  //       <br/>
-  //       <li><b>Multi-Platform Development:</b> <br/> Whether it’s Unity or Unreal Engine, we use the latest tools and technologies to ensure your game runs smoothly on all platforms, including iOS, Android, PC, and consoles.</li>
-  //       <br/>
-  //       <li><b>2D/3D Design and Animation:</b><br/> Our artists and animators create stunning graphics and immersive environments that enhance the gameplay experience.</li>
-  //     </ol>
-  //     <br/>
-  //     <br/>
-  //     <p>From mobile games to AAA titles, we are committed to delivering high-quality games that resonate with players and stand out in the market.</p>`,
-  // },
+  {
+    id: 5,
+    title: "Custom Software Development",
+    description:
+      "Unlock the full potential of your business with our tailored custom software development solutions. We create agile, scalable, and high-performing software that enhances efficiency and fuels innovation.",
+    icon: allServiceIcon5,
+    link: "/custom-software-development",
+
+    detailHeading:
+      "Custom Software Development: Tailored Solutions for Your Business",
+    detailContent: `<p>In today's fast-paced digital landscape, off-the-shelf software solutions often fall short of meeting unique business needs. That's where our custom software development services come in – tailored to empower your organization with agility, efficiency, and innovation.</p>
+      <br/>
+      <ol>
+        <li><b>Boost Operational Efficiency:</b><br/> Our solutions streamline business processes, reducing inefficiencies and improving productivity.</li>
+        <br/>
+        <li><b>Enhance Customer Experiences:</b> <br/> We build user-centric software that improves engagement and satisfaction.</li>
+        <br/>
+        <li><b>Seamless Integration:</b><br/> Our software integrates effortlessly with your existing systems to ensure a smooth transition.</li>
+      </ol>
+      <br/>
+      <br/>
+      <p>Our expert developers leverage the latest technologies (AI, ML, IoT, Cloud Computing) and agile methodologies to build scalable and innovative solutions. With a collaborative approach, ongoing support, and flexible solutions, we help your business thrive in a competitive digital world.</p>`,
+  },
 ];
 
 // portfolio images (web development)

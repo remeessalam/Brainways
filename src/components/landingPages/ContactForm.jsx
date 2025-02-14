@@ -157,14 +157,14 @@ const ContactForm = () => {
               type="url"
               placeholder="Website URL"
               className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("websiteUrl", {
-                required: "Website URL is required",
-                pattern: {
-                  value:
-                    /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
-                  message: "Entered URL is invalid",
-                },
-              })}
+              // {...register("websiteUrl", {
+              //   required: "Website URL is required",
+              //   pattern: {
+              //     value:
+              //       /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
+              //     message: "Entered URL is invalid",
+              //   },
+              // })}
             />
             <small className="error-message">
               {errors.websiteUrl?.message}
