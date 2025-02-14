@@ -44,17 +44,21 @@ const LeadForm = () => {
     var payload = {
       // to: "remeesreme4u@gmail.com",
       to: companyDetails.email,
+      name: "Brainways",
       subject: "New Lead Form Submission",
       body: emailBody,
     };
 
-    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+    await fetch(
+      "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
       .then((response) => response.json())
       .then((res) => {
         if (res.error) {
