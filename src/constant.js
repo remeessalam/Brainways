@@ -66,11 +66,11 @@ export const routes = [
     name: "Services",
     element: <Services />,
   },
-  {
-    path: "/blogs",
-    name: "Blogs",
-    element: <Blogs />,
-  },
+  // {
+  //   path: "/blogs",
+  //   name: "Blogs",
+  //   element: <Blogs />,
+  // },
   {
     path: "/contact-us",
     name: "Contact Us",
