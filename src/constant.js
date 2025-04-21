@@ -46,10 +46,9 @@ export const companyDetails = {
   email: "admin@brainwaystech.com",
   linkedin: "https://www.linkedin.com/company/brainwaystech-llp/",
   instagram:
-    "https://www.instagram.com/brainwaystech_ai?igsh=MTk5Y25wMDA0NHM2ag==",
+    "https://www.instagram.com/brainwaystech.ai?igsh=MWlieGJnZXhtMG9weg==",
   twitter: "https://x.com/vasanthsoffici",
 };
-
 export const routes = [
   {
     path: "/",
